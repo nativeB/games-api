@@ -8,7 +8,7 @@ export const getGames =  async (req: Request, res: Response) => {
   try{
     const query = processQuery(req.query, gameQueryParamsValidator);
     const {filter, ...options} = query;
-    const totalRecords = await countGames(filter)
+    const totalRecords = await countGames({})
     const games = await getManyGames(filter, options)
 
     return res.json({
