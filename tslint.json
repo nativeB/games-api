@@ -16,7 +16,10 @@
         }
         ],
         "arrow-parens": [true, "ban-single-arg-parens"],
-        "interface-name": [true, "never-prefix"]
+        "interface-name": [true, "never-prefix"],
+        "no-console": {
+            "severity": "warning"
+        }
     },
     "rulesDirectory": []
 }

@@ -24,11 +24,11 @@ export interface GameDocumentInterface extends mongoose.Document {
 const GameSchema = new mongoose.Schema({
   userId: {
     type: Number,
-    required: true,
+    required: true
   },
   game: {
     type: String,
-    required: true,
+    required: true
   },
   playTime: {
     type: Number,
