@@ -1,7 +1,7 @@
 import { GameTypes } from "../types";
 
 
-const GAME_TYPES: GameTypes[]  = ["PS4", "PS5", "Xbox One", "Nintendo Switch", "PC", "Xbox 360" , "Android"]
+const GAME_TYPES: GameTypes[]  = ["PS4", "PS5", "PS3", "Xbox One", "Nintendo Switch", "PC", "Xbox 360" , "Android"]
 const STATUS_CODES:  {
     [key: string]: string
 } = {
@@ -17,26 +17,9 @@ const ERROR_MESSAGES: {
         exists?: string;
     }
 } = {
-    customerIdOwner: {
-        required: "Customer id of owner is required",
-        type: "Customer id of owner should be a number"
-    },
-    customerIdUser: {
-        required: "Customer Id of user is required",
-        type: "Customer Id of user owner should be a number"
-    },
-    serviceType: {
-        required: "Game Type is  required",
-        type: `Game type must be one of ${GAME_TYPES.join(",")}`
-    },
-    msisdn: {
-        required: "msisdn is required",
-        type: "msisdn must be in E164 format",
-        exists: "msisdn already exists!"
-    },
-    subscriberId: {
-        required: "subscriberId param is required",
-        type: "Subscriber id should be an objectid"
+    gameId: {
+        required: "gameId param is required",
+        type: "game id should be an objectid"
     }
 }
 const constants = Object.freeze({

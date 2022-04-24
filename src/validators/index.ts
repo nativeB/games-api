@@ -16,6 +16,6 @@ export const gameQueryParamsValidator = {
 
 
 export const gameGetRouteValidator = [
-    check("gameId",constants.ERROR_MESSAGES.subscriberId.required ).exists().isMongoId().withMessage(constants.ERROR_MESSAGES.subscriberId.type)
+    check("gameId",constants.ERROR_MESSAGES.gameId.required ).exists().isMongoId().withMessage(constants.ERROR_MESSAGES.gameId.type)
   ]
 

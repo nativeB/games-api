@@ -13,7 +13,8 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "build"]
 }

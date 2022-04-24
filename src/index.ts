@@ -1,3 +1,6 @@
+import dotenv = require("dotenv")
+dotenv.config();
+
 import * as express from "express";
 import  * as mongoose from "mongoose"
 import { json } from "body-parser";

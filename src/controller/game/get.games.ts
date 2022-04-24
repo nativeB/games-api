@@ -9,12 +9,12 @@ export const getGames =  async (req: Request, res: Response) => {
     const query = processQuery(req.query, gameQueryParamsValidator);
     const {filter, ...options} = query;
     const totalRecords = await countGames(filter)
-    const subscribers = await getManyGames(filter, options)
+    const games = await getManyGames(filter, options)
 
     return res.json({
       success: true,
       totalRecords,
-      subscribers
+      games
     })
   }catch(error: any) {
     return res.status(500).send({

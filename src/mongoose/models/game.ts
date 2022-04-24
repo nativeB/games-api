@@ -25,12 +25,10 @@ const GameSchema = new mongoose.Schema({
   userId: {
     type: Number,
     required: true,
-    unique:true
   },
   game: {
     type: String,
     required: true,
-    unique:true
   },
   playTime: {
     type: Number,
@@ -41,7 +39,7 @@ const GameSchema = new mongoose.Schema({
     required: true
   },
   platforms: {
-    type: String,
+    type: [String],
     required: true,
     enum: constants.GAME_TYPES
   }
